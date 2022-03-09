@@ -14,11 +14,11 @@ public class US_SearchBar extends TestBase {
     @Test
     public void search_with_enterKey_test() {
         WebElement searchBar = Driver.getDriver().findElement(By.xpath("//input[@id='search']"));
-        searchBar.sendKeys("Junoon" + Keys.ENTER);
+        searchBar.sendKeys("The Weekend" + Keys.ENTER);
 
         YouTubeUtils.sleep(3);
         String actualTitle = Driver.getDriver().getTitle();
-        String expectedTitle = "Junoon - YouTube";
+        String expectedTitle = "The Weekend - YouTube";
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 
